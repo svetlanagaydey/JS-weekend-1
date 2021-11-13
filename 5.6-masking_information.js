@@ -7,4 +7,4 @@ function maskify(string) {
     }
     return result;
 }
-console.log(maskify("1234567890"))
+console.log(maskify("1234567890"));

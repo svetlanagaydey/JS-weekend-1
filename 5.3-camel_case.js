@@ -1,15 +1,13 @@
 function camelCase(str){
+    let splitStr = str.split("-");
     let result = "";
-    for (let i=0; i<str.length; i++) {
-       if ((str[i] == "-") || (str[i] == '_')) {
-           continue;
-        } else if (str[0].toUpperCase() == str[i])  {
-            result += str[i];
-        }  else if (str[i].toUpperCase() == str[i]) {
-            result += str[i].toLowerCase();
-        } else {
-        result += str[i];
-        }
+      
+    for(let i = 0; i < splitStr.length; i++){
+      if (i===0) {
+        result += splitStr[i][0].toLowerCase() + splitStr[i].slice(1);
+      } else {
+        result += splitStr[i][0].toUpperCase() + splitStr[i].slice(1);    
+      }
     }
     return result;
 }

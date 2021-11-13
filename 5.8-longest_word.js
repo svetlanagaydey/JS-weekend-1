@@ -4,7 +4,6 @@ function longestWord(string) {
         if (result.length < element.length) {
             result = element;
         }
-
     }
     return result;
 }
